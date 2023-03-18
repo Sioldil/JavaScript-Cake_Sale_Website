@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -21,7 +22,7 @@ const Header = () => {
                   </div>
                   <div class="header__top__right__cart">
                     <a href="#">
-                      <img src="assets/img/icon/cart.png" alt="" />{' '}
+                      <img src="assets/img/icon/cart.png" alt="" />
                       <span>0</span>
                     </a>
                     <div class="cart__price">
@@ -46,7 +47,7 @@ const Header = () => {
                   <a href="./index.html">Home</a>
                 </li>
                 <li>
-                  <a href="./about.html">About</a>
+                  <Link to="About">About</Link>
                 </li>
                 <li>
                   <a href="./shop.html">Shop</a>
