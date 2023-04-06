@@ -73,7 +73,6 @@ export default class Admin extends Component {
           if (data.message) {
             console.log(data.message);
             if (data.message === 'User was deleted successfully!') {
-              // update the state to remove the deleted user from the data array
               this.setState((prevState) => {
                 console.log(prevState);
                 return {

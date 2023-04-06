@@ -1,15 +1,16 @@
-module.exports = (mongoose) => {
-  const Category = mongoose.model(
-    'category',
-    mongoose.Schema(
-      {
-        title: String,
-        description: String,
-        published: Boolean,
-      },
-      { timestamps: true }
-    )
-  );
+const mongoose = require('mongoose');
 
-  return Category;
-};
+const Category = mongoose.model(
+  'Category',
+  new mongoose.Schema(
+    {
+      name: String,
+      status: String,
+    },
+    {
+      collection: 'CategoryInfo',
+    }
+  )
+);
+
+module.exports = Category;
