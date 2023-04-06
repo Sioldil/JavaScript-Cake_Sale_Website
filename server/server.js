@@ -5,11 +5,7 @@ const swaggerUI = require('swagger-ui-express');
 
 const app = express();
 
-var corsOptions = {
-  origin: 'http://localhost:8081',
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
@@ -73,16 +69,6 @@ function initial() {
         }
 
         console.log("added 'user' to roles collection");
-      });
-
-      new Role({
-        name: 'moderator',
-      }).save((err) => {
-        if (err) {
-          console.log('error', err);
-        }
-
-        console.log("added 'moderator' to roles collection");
       });
 
       new Role({
