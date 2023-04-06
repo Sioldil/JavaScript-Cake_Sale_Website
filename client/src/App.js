@@ -7,6 +7,7 @@ import Shop from './pages/Shop';
 import Shop_details from './pages/Shop-details';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Admin from './pages/Admin';
 
 // Routing --------------------
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="shop_detail" element={<Shop_details />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="admin" element={<Admin />} />
         </Route>
       </Routes>
     </Router>

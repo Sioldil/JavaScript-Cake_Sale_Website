@@ -14,29 +14,47 @@ export default class Register extends Component {
     e.preventDefault();
     const { username, email, password } = this.state;
     console.log(username, email, password);
+    fetch('http://localhost:8080/api/auth/signup', {
+      method: 'POST',
+      crossDomain: true,
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+      }),
+    })
+      .then((res) => res.json)
+      .then((res) => {
+        console.log(res);
+      });
   }
   render() {
     return (
       <>
-        <section class="hero">
+        <section className="hero">
           <div
-            class="hero__slider "
+            className="hero__slider "
             style={{
               backgroundImage: "url('assets/img/hero/hero-1.jpg')",
             }}
           >
-            <div class="hero__item set-bg">
-              <div class="container">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-lg-8">
-                    <div class="class__sidebar">
+            <div className="hero__item set-bg">
+              <div className="container">
+                <div className="row d-flex justify-content-center">
+                  <div className="col-lg-8">
+                    <div className="class__sidebar">
                       <h5>Register</h5>
                       <form onSubmit={this.handleSubmit}>
                         <input
                           type="text"
                           placeholder="Enter your name"
                           name="username"
-                          required="true"
+                          required
                           onChange={(e) =>
                             this.setState({ username: e.target.value })
                           }
@@ -57,7 +75,7 @@ export default class Register extends Component {
                             this.setState({ password: e.target.value })
                           }
                         />
-                        <button type="submit" class="site-btn">
+                        <button type="submit" className="site-btn">
                           Register
                         </button>
                       </form>

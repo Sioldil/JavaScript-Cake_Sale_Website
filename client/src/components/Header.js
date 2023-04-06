@@ -3,29 +3,24 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header class="header">
-      <div class="header__top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="header__top__inner">
-                <div class="header__logo">
-                  <a href="./index.html">
+    <header className="header">
+      <div className="header__top">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="header__top__inner">
+                <div className="header__logo">
+                  <a href="./">
                     <img src="assets/img/logo.png" alt="" />
                   </a>
                 </div>
-                <div class="header__top__right">
-                  <div class="header__top__right__links">
-                    <a href="#">
-                      <img src="assets/img/icon/heart.png" alt="" />
-                    </a>
-                  </div>
-                  <div class="header__top__right__cart">
+                <div className="header__top__right">
+                  <div className="header__top__right__cart">
                     <a href="#">
                       <img src="assets/img/icon/cart.png" alt="" />
                       <span>0</span>
                     </a>
-                    <div class="cart__price">
+                    <div className="cart__price">
                       Cart: <span>$0.00</span>
                     </div>
                   </div>
@@ -33,30 +28,27 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div class="canvas__open">
-            <i class="fa fa-bars"></i>
+          <div className="canvas__open">
+            <i className="fa fa-bars"></i>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <nav class="header__menu mobile-menu">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <nav className="header__menu mobile-menu">
               <ul>
-                <li class="active">
-                  <a href="./index.html">Home</a>
+                <li className="active">
+                  <a href="./">Home</a>
                 </li>
                 <li>
-                  <Link to="About">About</Link>
-                </li>
-                <li>
-                  <a href="./shop.html">Shop</a>
+                  <a href="./shop">Shop</a>
                 </li>
                 <li>
                   <a href="#">Pages</a>
-                  <ul class="dropdown">
+                  <ul className="dropdown">
                     <li>
-                      <a href="./shop-details.html">Shop Details</a>
+                      <a href="./shop_detail">Shop Details</a>
                     </li>
                     <li>
                       <a href="./shoping-cart.html">Shoping Cart</a>
