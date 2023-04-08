@@ -8,6 +8,7 @@ import Shop_details from './pages/Shop-details';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Admin from './pages/Admin';
+import UpdateProduct from './pages/Update-Product';
 
 // Routing --------------------
 
@@ -19,10 +20,11 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
           <Route path="shop" element={<Shop />} />
-          <Route path="shop_detail" element={<Shop_details />} />
+          <Route path="shop/:id" element={<Shop_details />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="admin" element={<Admin />} />
+          <Route path="update-product/:id" element={<UpdateProduct />} />
         </Route>
       </Routes>
     </Router>
